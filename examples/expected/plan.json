@@ -1,0 +1,175 @@
+{
+  "contract_name": "wmtads.plan",
+  "contract_version": "1.0",
+  "producer_version": "1.0.0",
+  "kind": "plan",
+  "local_id": "local-9b4ac19a9439e89e",
+  "status": "PLAN_READY",
+  "review": "HUMAN_REVIEW_REQUIRED",
+  "publish_authorized": false,
+  "external_reads": false,
+  "external_writes": false,
+  "generation_mode": "deterministic",
+  "input": {
+    "platform": "walmart",
+    "market": "US",
+    "currency": "USD",
+    "source": {
+      "kind": "synthetic",
+      "note": "All products, money, permissions and results are fictional test data."
+    },
+    "money_decimals": 2,
+    "campaign": {
+      "mode": "sponsored_products_auto",
+      "days": 14,
+      "budget": "1400",
+      "account_ready": true,
+      "feature_confirmed": true,
+      "target_return": null,
+      "ad_rate": null
+    },
+    "products": [
+      {
+        "sku": "demo-cup",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "stock": 30,
+        "listing_ready": true,
+        "advertising_eligible": true,
+        "buy_box": true,
+        "order_revenue": "100",
+        "order_costs": {
+          "cogs": "35",
+          "platform_fees": "8",
+          "fulfilment": "10",
+          "other": "2"
+        },
+        "target_profit": "10",
+        "expected_cvr": "0.05",
+        "fee_base_per_order": null,
+        "terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ]
+      },
+      {
+        "sku": "demo-hold",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "stock": 0,
+        "listing_ready": true,
+        "advertising_eligible": true,
+        "buy_box": true,
+        "order_revenue": "100",
+        "order_costs": {
+          "cogs": "35",
+          "platform_fees": "8",
+          "fulfilment": "10",
+          "other": "2"
+        },
+        "target_profit": "10",
+        "expected_cvr": "0.05",
+        "fee_base_per_order": null,
+        "terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ]
+      }
+    ],
+    "assets": {
+      "rights_confirmed": null,
+      "live_ready": null
+    }
+  },
+  "result": {
+    "platform_workflow": [
+      "確認站點與 Sponsored Products 功能",
+      "檢查商品已發佈、有庫存及 Buy Box",
+      "按相近商品／類別整理試投組",
+      "使用自動 targeting 企劃；不輸出手動關鍵字出價設定"
+    ],
+    "products": [
+      {
+        "sku": "demo-cup",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "readiness": "PILOT_CANDIDATE",
+        "blocked_by": [],
+        "missing": [],
+        "economics": {
+          "status": "SCENARIO_ONLY",
+          "non_ad_contribution_per_order": "45.000000",
+          "break_even_cpa": "45.000000",
+          "break_even_roas_on_net_revenue": "2.222222",
+          "target_ad_allowance_per_order": "35.000000",
+          "target_roas_on_net_revenue": "2.857143",
+          "economic_cpc_ceiling": "1.750000"
+        },
+        "supplied_listing_terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ],
+        "research_status": "NO_SEARCH_VOLUME_OR_LIVE_KEYWORD_DATA"
+      },
+      {
+        "sku": "demo-hold",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "readiness": "BLOCKED",
+        "blocked_by": [
+          "out_of_stock"
+        ],
+        "missing": [],
+        "economics": {
+          "status": "SCENARIO_ONLY",
+          "non_ad_contribution_per_order": "45.000000",
+          "break_even_cpa": "45.000000",
+          "break_even_roas_on_net_revenue": "2.222222",
+          "target_ad_allowance_per_order": "35.000000",
+          "target_roas_on_net_revenue": "2.857143",
+          "economic_cpc_ceiling": "1.750000"
+        },
+        "supplied_listing_terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ],
+        "research_status": "NO_SEARCH_VOLUME_OR_LIVE_KEYWORD_DATA"
+      }
+    ],
+    "budget": {
+      "scope": "sponsored_products_campaign_accounting_only",
+      "total_cap": "1400.000000",
+      "allocated_total": "1400.000000",
+      "reserve": "0.000000",
+      "allocation": [
+        {
+          "sku": "demo-cup",
+          "pilot_allowance": "1400.000000"
+        }
+      ],
+      "days": 14,
+      "daily_reference_not_live_budget": "100.000000"
+    },
+    "requested_target_return": null,
+    "target_return_validated_for_platform": false,
+    "checklist": [
+      "確認商品已發佈",
+      "有可售庫存",
+      "Buy Box 已確認",
+      "營收、廣告歸因與產品成本一致",
+      "手動／自動功能分開確認"
+    ],
+    "notes": [
+      "First version covers Sponsored Products only, not Sponsored Brands, Sponsored Videos or display.",
+      "Buy Box, inventory and published listing are separate checks. No threshold is inferred from reviews or sales rank.",
+      "Do not hardcode US rules, auction type or minimum bids into other markets; official Canada and US details differ.",
+      "Keyword terms remain candidates. No live auction, rank or suggested bid data is fetched.",
+      "All allocations are equal-split pilot accounting scenarios, not optimized bids or live budgets.",
+      "Use net revenue and fully loaded non-ad costs from the same representative order. No platform fees are assumed.",
+      "Reported gross GMV / spend is not directly comparable with a net-revenue break-even threshold.",
+      "Capability confirmations are user assertions, not independently verified account eligibility.",
+      "Review stock, attribution maturity, rights, site rules and changes before taking any manual action."
+    ],
+    "source_refs": [
+      "WMT-1",
+      "WMT-2",
+      "WMT-3"
+    ]
+  }
+}

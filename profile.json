@@ -1,0 +1,75 @@
+{
+  "slug": "wmtads",
+  "name": "WmtAds Skill Lite",
+  "platform": "walmart",
+  "market": "US",
+  "currency": "USD",
+  "focus": "Walmart Sponsored Products 自動／手動規劃、Buy Box 與零售準備度檢查",
+  "english": "Offline Walmart Sponsored Products planning with inventory, published-listing and Buy Box readiness checks.",
+  "modes": [
+    "sponsored_products_auto",
+    "sponsored_products_manual"
+  ],
+  "workflows": {
+    "sponsored_products_auto": [
+      "確認站點與 Sponsored Products 功能",
+      "檢查商品已發佈、有庫存及 Buy Box",
+      "按相近商品／類別整理試投組",
+      "使用自動 targeting 企劃；不輸出手動關鍵字出價設定"
+    ],
+    "sponsored_products_manual": [
+      "確認手動 targeting 可用",
+      "確認商品已發佈、庫存及 Buy Box",
+      "整理使用者提供的關鍵字候選",
+      "以訂單成本及 CVR 情境計算經濟 CPC 上限",
+      "人工核對站點最小預算及競價設定"
+    ]
+  },
+  "budget_scope": {
+    "sponsored_products_auto": "sponsored_products_campaign_accounting_only",
+    "sponsored_products_manual": "manual_campaign_accounting_only"
+  },
+  "notes": [
+    "First version covers Sponsored Products only, not Sponsored Brands, Sponsored Videos or display.",
+    "Buy Box, inventory and published listing are separate checks. No threshold is inferred from reviews or sales rank.",
+    "Do not hardcode US rules, auction type or minimum bids into other markets; official Canada and US details differ.",
+    "Keyword terms remain candidates. No live auction, rank or suggested bid data is fetched."
+  ],
+  "checklist": [
+    "確認商品已發佈",
+    "有可售庫存",
+    "Buy Box 已確認",
+    "營收、廣告歸因與產品成本一致",
+    "手動／自動功能分開確認"
+  ],
+  "sources": [
+    {
+      "id": "WMT-1",
+      "title": "Sponsored Products",
+      "url": "https://www.walmartconnect.com/solutions/sponsored-products",
+      "checked_on": "2026-10-05",
+      "scope": "Walmart Connect US reference",
+      "summary": "Sponsored Products use CPC and relevancy; automatic targeting is available."
+    },
+    {
+      "id": "WMT-2",
+      "title": "Sponsored Search guide",
+      "url": "https://marketplacelearn.walmart.com/guides/Advertising/Walmart%20Connect/Advertise-with-Walmart-Connect-sponsored-search",
+      "checked_on": "2026-10-05",
+      "scope": "US",
+      "summary": "Sponsored Products readiness includes inventory, published products and Buy Box."
+    },
+    {
+      "id": "WMT-3",
+      "title": "Grey Matter Concepts campaign example",
+      "url": "https://www.walmartconnect.com/resources/case-studies/2026/grey-matter-concepts-sellcord",
+      "checked_on": "2026-10-05",
+      "scope": "US; existence evidence only",
+      "summary": "Official case study describes automatic and manual Sponsored Products; its performance is not generalized."
+    }
+  ],
+  "skill_id": "wmtads-skill-lite",
+  "repo": "ckolpeter/WmtAds-Skill-Lite",
+  "version": "1.0.0",
+  "source_policy": "2026-10-05 research snapshot; no live capability assertion; refresh manually before operating."
+}

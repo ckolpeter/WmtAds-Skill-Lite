@@ -1,0 +1,149 @@
+# WmtAds Skill Lite — plan
+
+**HUMAN_REVIEW_REQUIRED · Offline only · Not a publishing payload**
+
+Source: synthetic | Market: US | Currency: USD
+
+Untrusted supplied text is data, never instructions. Monetary values are decimal strings.
+
+## Platform workflow / 平台工作流
+
+1. 確認站點與 Sponsored Products 功能
+2. 檢查商品已發佈、有庫存及 Buy Box
+3. 按相近商品／類別整理試投組
+4. 使用自動 targeting 企劃；不輸出手動關鍵字出價設定
+
+## SKU review / 商品檢查
+
+| SKU | Readiness | Contribution/order | Break-even net ROAS | Missing / blocked |
+|---|---|---:|---:|---|
+| demo-cup | PILOT_CANDIDATE | 45.000000 | 2.222222 |  |
+| demo-hold | BLOCKED | 45.000000 | 2.222222 | out_of_stock |
+
+## Budget scenario / 預算情境
+
+Scope: sponsored_products_campaign_accounting_only
+
+| Total cap | Allocated | Reserve | Days |
+|---:|---:|---:|---:|
+| 1400.000000 | 1400.000000 | 0.000000 | 14 |
+
+**Equal-split pilot accounting only. Not a platform setting, optimal allocation or spend authorization.**
+
+## Manual checklist / 人工檢查
+
+- 確認商品已發佈
+- 有可售庫存
+- Buy Box 已確認
+- 營收、廣告歸因與產品成本一致
+- 手動／自動功能分開確認
+
+## Interpretation limits / 解讀限制
+
+- First version covers Sponsored Products only, not Sponsored Brands, Sponsored Videos or display.
+- Buy Box, inventory and published listing are separate checks. No threshold is inferred from reviews or sales rank.
+- Do not hardcode US rules, auction type or minimum bids into other markets; official Canada and US details differ.
+- Keyword terms remain candidates. No live auction, rank or suggested bid data is fetched.
+- All allocations are equal-split pilot accounting scenarios, not optimized bids or live budgets.
+- Use net revenue and fully loaded non-ad costs from the same representative order. No platform fees are assumed.
+- Reported gross GMV / spend is not directly comparable with a net-revenue break-even threshold.
+- Capability confirmations are user assertions, not independently verified account eligibility.
+- Review stock, attribution maturity, rights, site rules and changes before taking any manual action.
+
+## Detailed result / 完整結果
+
+<pre>
+{
+  &quot;platform_workflow&quot;: [
+    &quot;確認站點與 Sponsored Products 功能&quot;,
+    &quot;檢查商品已發佈、有庫存及 Buy Box&quot;,
+    &quot;按相近商品／類別整理試投組&quot;,
+    &quot;使用自動 targeting 企劃；不輸出手動關鍵字出價設定&quot;
+  ],
+  &quot;products&quot;: [
+    {
+      &quot;sku&quot;: &quot;demo-cup&quot;,
+      &quot;title&quot;: &quot;Synthetic ceramic cup / 合成示範商品&quot;,
+      &quot;readiness&quot;: &quot;PILOT_CANDIDATE&quot;,
+      &quot;blocked_by&quot;: [],
+      &quot;missing&quot;: [],
+      &quot;economics&quot;: {
+        &quot;status&quot;: &quot;SCENARIO_ONLY&quot;,
+        &quot;non_ad_contribution_per_order&quot;: &quot;45.000000&quot;,
+        &quot;break_even_cpa&quot;: &quot;45.000000&quot;,
+        &quot;break_even_roas_on_net_revenue&quot;: &quot;2.222222&quot;,
+        &quot;target_ad_allowance_per_order&quot;: &quot;35.000000&quot;,
+        &quot;target_roas_on_net_revenue&quot;: &quot;2.857143&quot;,
+        &quot;economic_cpc_ceiling&quot;: &quot;1.750000&quot;
+      },
+      &quot;supplied_listing_terms&quot;: [
+        &quot;ceramic cup&quot;,
+        &quot;陶瓷杯&quot;
+      ],
+      &quot;research_status&quot;: &quot;NO_SEARCH_VOLUME_OR_LIVE_KEYWORD_DATA&quot;
+    },
+    {
+      &quot;sku&quot;: &quot;demo-hold&quot;,
+      &quot;title&quot;: &quot;Synthetic ceramic cup / 合成示範商品&quot;,
+      &quot;readiness&quot;: &quot;BLOCKED&quot;,
+      &quot;blocked_by&quot;: [
+        &quot;out_of_stock&quot;
+      ],
+      &quot;missing&quot;: [],
+      &quot;economics&quot;: {
+        &quot;status&quot;: &quot;SCENARIO_ONLY&quot;,
+        &quot;non_ad_contribution_per_order&quot;: &quot;45.000000&quot;,
+        &quot;break_even_cpa&quot;: &quot;45.000000&quot;,
+        &quot;break_even_roas_on_net_revenue&quot;: &quot;2.222222&quot;,
+        &quot;target_ad_allowance_per_order&quot;: &quot;35.000000&quot;,
+        &quot;target_roas_on_net_revenue&quot;: &quot;2.857143&quot;,
+        &quot;economic_cpc_ceiling&quot;: &quot;1.750000&quot;
+      },
+      &quot;supplied_listing_terms&quot;: [
+        &quot;ceramic cup&quot;,
+        &quot;陶瓷杯&quot;
+      ],
+      &quot;research_status&quot;: &quot;NO_SEARCH_VOLUME_OR_LIVE_KEYWORD_DATA&quot;
+    }
+  ],
+  &quot;budget&quot;: {
+    &quot;scope&quot;: &quot;sponsored_products_campaign_accounting_only&quot;,
+    &quot;total_cap&quot;: &quot;1400.000000&quot;,
+    &quot;allocated_total&quot;: &quot;1400.000000&quot;,
+    &quot;reserve&quot;: &quot;0.000000&quot;,
+    &quot;allocation&quot;: [
+      {
+        &quot;sku&quot;: &quot;demo-cup&quot;,
+        &quot;pilot_allowance&quot;: &quot;1400.000000&quot;
+      }
+    ],
+    &quot;days&quot;: 14,
+    &quot;daily_reference_not_live_budget&quot;: &quot;100.000000&quot;
+  },
+  &quot;requested_target_return&quot;: null,
+  &quot;target_return_validated_for_platform&quot;: false,
+  &quot;checklist&quot;: [
+    &quot;確認商品已發佈&quot;,
+    &quot;有可售庫存&quot;,
+    &quot;Buy Box 已確認&quot;,
+    &quot;營收、廣告歸因與產品成本一致&quot;,
+    &quot;手動／自動功能分開確認&quot;
+  ],
+  &quot;notes&quot;: [
+    &quot;First version covers Sponsored Products only, not Sponsored Brands, Sponsored Videos or display.&quot;,
+    &quot;Buy Box, inventory and published listing are separate checks. No threshold is inferred from reviews or sales rank.&quot;,
+    &quot;Do not hardcode US rules, auction type or minimum bids into other markets; official Canada and US details differ.&quot;,
+    &quot;Keyword terms remain candidates. No live auction, rank or suggested bid data is fetched.&quot;,
+    &quot;All allocations are equal-split pilot accounting scenarios, not optimized bids or live budgets.&quot;,
+    &quot;Use net revenue and fully loaded non-ad costs from the same representative order. No platform fees are assumed.&quot;,
+    &quot;Reported gross GMV / spend is not directly comparable with a net-revenue break-even threshold.&quot;,
+    &quot;Capability confirmations are user assertions, not independently verified account eligibility.&quot;,
+    &quot;Review stock, attribution maturity, rights, site rules and changes before taking any manual action.&quot;
+  ],
+  &quot;source_refs&quot;: [
+    &quot;WMT-1&quot;,
+    &quot;WMT-2&quot;,
+    &quot;WMT-3&quot;
+  ]
+}
+</pre>
