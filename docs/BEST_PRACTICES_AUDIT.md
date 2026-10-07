@@ -11,6 +11,6 @@ Scope: `wmtads-skill-lite` only. This is an implementation audit, not platform c
 | Ordered checklist | PASS |
 | Self-correction loop | PASS |
 | Dependencies explicit | PASS |
-| Cross-model evaluation | NOT_RUN |
+| Cross-model evaluation | PASS (scoped AUTOMATED_SMOKE) | Historical reconciled smoke evidence: Haiku PASS_WITH_WARNINGS, Sonnet PASS_WITH_WARNINGS, Opus PASS_WITH_WARNINGS; warnings: REPORT_PARSE_FAILED; NON_REQUIRED_COMMAND_ATTEMPTED. No FAIL or INVALID_RUN. |
 
 The release gate enforces structural checks. CI PASS does not prove live feature availability, seller eligibility, attribution quality, model quality, or advertising performance.
